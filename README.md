@@ -133,4 +133,4 @@ const url$ = getDownloadURL(ref);
 
 ## Examples
 
-[Examples](https://github.com/davideast/rxfire-samples): See this example repository for a list of ways to configure and use RxFire.
+[Examples](https://github.com/davideast/rxfire-samples): See this example repository for a list of ways to configure and use RxFire. (fork test)
