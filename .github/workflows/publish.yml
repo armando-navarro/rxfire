@@ -32,10 +32,9 @@ jobs:
       - name: Download artifacts
         uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4.3.0
 
-      - name: Publish
+      - name: Publish (dry run, fork test only)
         run: |
           cd ./rxfire-${{ github.run_id }}
-          chmod +x publish.sh
-          ./publish.sh
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          echo "publish.sh would run: $(cat publish.sh)"
+          grep '"version"' package.json
+          npm pack --dry-run 2>&1 | tail -3
