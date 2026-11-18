@@ -53,9 +53,5 @@ describe('RxFire Auth', () => {
 
       signInAnonymously(auth);
     });
-
-    it('fork test: deliberate failure to check the publish dependency', () => {
-      expect(1).toEqual(2);
-    });
   });
 });
