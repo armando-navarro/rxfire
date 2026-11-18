@@ -5,8 +5,10 @@ permissions:
 
 on:
   push:
+    # publish.yml runs this workflow for main, so it must keep calling it on push to main.
     branches-ignore:
       - main
+
     paths-ignore:
       - "**/*.md"
   pull_request:
